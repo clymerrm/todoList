@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header style={headerStyle}>
-            <h1>Target Quality 2019 Things To Do</h1>
+            <h1>Codemash 2020 Things To Do</h1>
             <Link style={linkStyle} to="/">Home</Link>
-            <a style={linkStyle} href = "https://kwsqa.org/tq2019/schedule/"> | Schedule</a>
-            <a style={linkStyle} href = "https://kwsqa.org/tq2019/speaker-information//"> | Speakers</a>
+            <a style={linkStyle} href = "https://www.codemash.org/session-list/"> | Schedule</a>
+            <a style={linkStyle} href = "https://www.codemash.org/speakers/"> | Speakers</a>
         </header>
     )
 };
