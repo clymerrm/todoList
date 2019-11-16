@@ -15,19 +15,39 @@ export class TodoItem extends Component {
     render() {
         const { id, title, completed, dueDate } = this.props.todo;
 
-        return (
-            <div style={ this.getStyle() } id={this.props.todo.id}>
-                <button onClick={this.props.delTodo.bind(this, id)} style={{ float: 'right', height: '60px' }} id={"delete"}>
-                    <i className="fa fa-trash-o fa-3x" aria-hidden="true" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}></i>
-                </button>
-                <p>
-                    <input type="checkbox" onChange={ this.props.markComplete.bind(this, id, completed ) } checked={ completed ? 'checked': '' }/>{' '}
-                    {title}
-                    <br/>
-                    <b>Due Date:</b> {moment(dueDate).format('YYYY-MM-DD')}
-                </p>
-            </div>
-        )
+        if (window.location.pathname.includes('latest')) {
+            return (
+                <div
+                    data-test-key={this.props.todo.title.concat('Item').replace(/\s/g, '').toLowerCase()}
+                    style={ this.getStyle() }
+                    id={this.props.todo.id}>
+
+                    <button data-test-key='DeleteButton' onClick={this.props.delTodo.bind(this, id)} style={{ float: 'right', height: '60px' }} id={"delete"}>
+                        <i className="fa fa-trash-o fa-3x" aria-hidden="true" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}></i>
+                    </button>
+                    <p>
+                        <input data-test-key='CompletedCheckbox' type="checkbox" onChange={ this.props.markComplete.bind(this, id, completed ) } checked={ completed ? 'checked': '' }/>{' '}
+                        <span data-test-key='TaskTitle'>{title}</span>
+                        <br/>
+                        <b data-test-key='DueDate'>Due Date:</b> {moment(dueDate).format('YYYY-MM-DD')}
+                    </p>
+                </div>
+            )
+        } else {
+            return (
+                <div style={ this.getStyle() } id={this.props.todo.id}>
+                    <button onClick={this.props.delTodo.bind(this, id)} style={{ float: 'right', height: '60px' }} id={"delete"}>
+                        <i className="fa fa-trash-o fa-3x" aria-hidden="true" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}></i>
+                    </button>
+                    <p>
+                        <input type="checkbox" onChange={ this.props.markComplete.bind(this, id, completed ) } checked={ completed ? 'checked': '' }/>{' '}
+                        {title}
+                        <br/>
+                        <b>Due Date:</b> {moment(dueDate).format('YYYY-MM-DD')}
+                    </p>
+                </div>
+            )
+        }
     }
 }
 

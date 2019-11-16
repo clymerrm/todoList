@@ -12,6 +12,7 @@ import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
 
 import './App.css';
+import Footer from "./components/layout/Footer";
 
 class App extends Component {
   state = {
@@ -89,12 +90,13 @@ class App extends Component {
           <div className="container">
             <Header />
             <br />
-            <Route exact path="/" render={props => (
+            <Route path={["/", "/latest"]} render={props => (
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo} />
                 <Todos todos={this.state.todos} markComplete = {this.markComplete} delTodo={this.delTodo}/>
               </React.Fragment>
             )} />
+            <Footer />
           </div>
         </div>
       </Router>
