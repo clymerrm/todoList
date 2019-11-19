@@ -19,6 +19,7 @@ export class TodoItem extends Component {
             return (
                 <div
                     data-test-key={this.props.todo.title.concat('Item').replace(/\s/g, '').toLowerCase()}
+                    data-test-status={ this.props.todo.completed ? 'completed': 'active' }
                     style={ this.getStyle() }
                     id={this.props.todo.id}>
 

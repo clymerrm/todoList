@@ -27,15 +27,17 @@ class App extends Component {
       }
       this.returnTodos()
   };
-
-  componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
-      if(prevState.selectedOption !== this.state.selectedOption) {
-          this.returnTodos()
-      }
-  }
+  //
+  // componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
+  //     if(prevState.selectedOption !== this.state.selectedOption) {
+  //         this.returnTodos()
+  //     }
+  // }
 
   returnTodos() {
-      this.setState({todos: ls.get('todos')});
+      const todos = ls.get('todos');
+      todos.sort((a,b) => (a.dueDate > b.dueDate) ? 1 : ((b.dueDate > a.dueDate) ? -1 : 0));
+      this.setState({todos: todos});
   }
 
   markComplete = (id, completed) => {
