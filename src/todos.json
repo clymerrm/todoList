@@ -14,56 +14,74 @@
     },
     {
       "id": 3,
-      "title": "Find XXX Room and Get Comfortable",
-      "dueDate": "2020-01-07T08:00:00.000Z",
+      "title": "Find Sagewood/Zebrawood Room and Get Comfortable",
+      "dueDate": "2020-01-08T13:00:00.000Z",
       "completed": true
     },
     {
       "id": 4,
       "title": "Learn What We'll Go Over In This Pre-Compiler",
-      "dueDate": "2020-01-07T08:30:00.000Z",
+      "dueDate": "2020-01-08T13:30:00.000Z",
       "completed": false
     },
     {
       "id": 5,
       "title": "Discuss Web Locators and Why They Dont Always Work",
-      "dueDate": "2020-01-07T09:00:00.000Z",
+      "dueDate": "2020-01-08T14:00:00.000Z",
       "completed": false
     },
     {
       "id": 6,
       "title": "Find Some Locators And Figure Out Better Ways To Do Them",
-      "dueDate": "2020-01-07T09:00:00.000Z",
+      "dueDate": "2020-01-08T14:00:00.000Z",
       "completed": false
     },
     {
       "id": 7,
       "title": "Make Our App More Automatable",
-      "dueDate": "2020-01-07T09:00:00.000Z",
+      "dueDate": "2020-01-08T14:00:00.000Z",
       "completed": false
     },
     {
       "id": 8,
       "title": "Learn about selenium",
-      "dueDate": "2020-01-07T10:00:00.000Z",
+      "dueDate": "2020-01-08T15:00:00.000Z",
       "completed": false
     },
     {
       "id": 9,
       "title": "Learn about cypress.io",
-      "dueDate": "2020-01-07T11:00:00.000Z",
+      "dueDate": "2020-01-08T16:00:00.000Z",
       "completed": false
     },
     {
       "id": 10,
       "title": "Learn about testcafe",
-      "dueDate": "2020-01-07T11:30:00.000Z",
+      "dueDate": "2020-01-08T16:30:00.000Z",
       "completed": false
     },
     {
       "id": 11,
       "title": "Figure out my go forward plans with automation",
-      "dueDate": "2020-01-07T12:00:00.000Z",
+      "dueDate": "2020-01-08T17:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 12,
+      "title": "Eat some dinner",
+      "dueDate": "2020-01-08T18:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 13,
+      "title": "Enjoy the Rest of Codemash",
+      "dueDate": "2020-01-10T17:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 14,
+      "title": "Share your learnings with your coworkers and implement some cool things",
+      "dueDate": "2020-01-13T09:00:00.000Z",
       "completed": false
     }
   ]
