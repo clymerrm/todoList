@@ -30,7 +30,8 @@ export class TodoItem extends Component {
                         <input data-test-key='CompletedCheckbox' type="checkbox" onChange={ this.props.markComplete.bind(this, id, completed ) } checked={ completed ? 'checked': '' }/>{' '}
                         <span data-test-key='TaskTitle'>{title}</span>
                         <br/>
-                        <b data-test-key='DueDate'>Due Date:</b> {moment(dueDate).format('YYYY-MM-DD')}
+                        <b>Due Date:</b> 
+                        <span data-test-key='DueDate'>{moment(dueDate).format('YYYY-MM-DD')}</span>
                     </p>
                 </div>
             )
