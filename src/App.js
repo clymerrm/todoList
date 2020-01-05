@@ -4,15 +4,17 @@ import ls from 'local-storage';
 import jsonData from './todos.json';
 
 // Importing React-Router
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 // Importing Components
 import Todos from './components/Todos';
 import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
+import Locators from './components/Locators';
 
 import './App.css';
 import Footer from "./components/layout/Footer";
+import BrowserRouter from "react-router-dom/BrowserRouter";
 
 class App extends Component {
   state = {
@@ -92,12 +94,21 @@ class App extends Component {
           <div className="container">
             <Header />
             <br />
-            <Route path={["/", "/latest"]} render={props => (
-              <React.Fragment>
-                <AddTodo addTodo={this.addTodo} />
-                <Todos todos={this.state.todos} markComplete = {this.markComplete} delTodo={this.delTodo}/>
-              </React.Fragment>
-            )} />
+            <BrowserRouter>
+                <Switch>
+                    <Route path={["/", "/latest"]} exact render={props => (
+                        <React.Fragment>
+                            <AddTodo addTodo={this.addTodo} />
+                            <Todos todos={this.state.todos} markComplete = {this.markComplete} delTodo={this.delTodo}/>
+                        </React.Fragment>
+                    )} />
+                    <Route path={["/locators", "/latest/locators", "/latest/compare"]} exact render={props => (
+                        <React.Fragment>
+                            <Locators />
+                        </React.Fragment>
+                    )} />
+                </Switch>
+            </BrowserRouter>
             <Footer />
           </div>
         </div>
