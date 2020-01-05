@@ -8,11 +8,21 @@ export class Footer extends Component {
     };
 
     render() {
-        return (
-            <footer style={headerStyle}>
-                <button onClick={(e) => { if (window.confirm('Are you sure you wish to reset all of your todos?')) this.onClick(e) }}>Reset Todos</button>
-            </footer>
-        )
+        if (window.location.pathname.includes('locators') || window.location.pathname.includes('compare')) {
+            return (
+                <footer style={headerStyle}>
+                </footer>
+            )
+        } else {
+            return (
+                <footer style={headerStyle}>
+                    <button onClick={(e) => {
+                        if (window.confirm('Are you sure you wish to reset all of your todos?')) this.onClick(e)
+                    }}>Reset Todos
+                    </button>
+                </footer>
+            )
+        }
     }
 }
 
