@@ -12,7 +12,7 @@ A to-do list app whose master branch leaves a lot to be desired in the testable 
 Clone the Project
 
 ```sh
-$ git clone https://github.com/clymerrm/todo-list.git
+$ git clone https://github.com/clymerrm/todoList.git
 $ cd todolist
 ```
 
@@ -24,28 +24,12 @@ Install the dependencies
 $ npm install
 ```
 
-### Run Dev Server First 
+### Run The App
 
-This will start the json-server which will populate the data needed for this project
-
-```sh
-$ npm dev-server
-```
-
-### Run Front End
-
-This will run your dev server at http://localhost:3000
+This will run your dev server at http://localhost:3000.  All data is stored in local storage.
 
 ```sh
 $ npm start
-```
-
-### Clean Populated Data for Project
-
-This will repopulate your seed data with the baseline data to restart your data set
-
-```sh 
-$ npm start-fresh
 ```
 
 ### Locators
