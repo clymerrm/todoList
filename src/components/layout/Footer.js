@@ -21,13 +21,13 @@ export class Footer extends Component {
                     }}>Reset Todos
                     </button>
                     <button>
-                        <a style={linkStyle} href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors" target="_blank">CSS Selectors</a>
+                        <a style={linkStyle} href="https://saucelabs.com/resources/articles/selenium-tips-css-selectors" target="_blank" rel="noopener noreferrer">CSS Selectors</a>
                     </button>
                     <button>
-                        <a style={linkStyle} href="https://www.lambdatest.com/blog/complete-guide-for-using-xpath-in-selenium-with-examples/" target="_blank">Xpath Selectors</a>
+                        <a style={linkStyle} href="https://www.lambdatest.com/blog/complete-guide-for-using-xpath-in-selenium-with-examples/" target="_blank" rel="noopener noreferrer">Xpath Selectors</a>
                     </button>
                     <button>
-                        <a style={linkStyle} href="https://www.lambdatest.com/blog/locators-in-selenium-webdriver-with-examples/" target="_blank">General Selectors</a>
+                        <a style={linkStyle} href="https://www.lambdatest.com/blog/locators-in-selenium-webdriver-with-examples/" target="_blank" rel="noopener noreferrer">General Selectors</a>
                     </button>
                 </footer>
             )
