@@ -31,8 +31,3 @@ This will run your dev server at http://localhost:3000.  All data is stored in l
 ```sh
 $ npm start
 ```
-
-### Locators
-CSS Examples - https://saucelabs.com/resources/articles/selenium-tips-css-selectors
-
-XPATH Examples - https://www.lambdatest.com/blog/complete-guide-for-using-xpath-in-selenium-with-examples/
